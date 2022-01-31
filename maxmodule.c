@@ -4,6 +4,7 @@
 #include <linux/kthread.h>
 #include <linux/sched.h>
 #include <linux/delay.h>
+
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Maxim V");
 MODULE_DESCRIPTION("Just starting kernel modules development process");
@@ -13,8 +14,7 @@ MODULE_VERSION("1.00");
 static int __init
 
 lkm_example_init(void) {
-    printk(KERN_INFO
-    "Hello, World!\n");
+    pr_info("Hello, World!\n");
     return 0;
 }
 
@@ -22,9 +22,7 @@ lkm_example_init(void) {
 static void __exit
 
 lkm_example_exit(void) {
-    is_completed = 1;
-    printk(KERN_INFO
-    "Goodbye, World!\n");
+    pr_info("Goodbye, World!\n");
 }
 
 
