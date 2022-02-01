@@ -1,1 +1,0 @@
-sudo rmmod ./build/maxmodule.ko

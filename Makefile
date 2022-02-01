@@ -21,4 +21,12 @@ $(BUILD_DIR_MAKEFILE): $(BUILD_DIR)
 
 clean:
 	make -C $(KDIR) M=$(BUILD_DIR) src=$(PWD) clean
- 
+
+install:
+	sudo insmod ./build/maxmodule.ko
+
+uninstall:
+	sudo rmmod ./build/maxmodule.ko
+
+reinstall:
+	(sudo rmmod ./build/maxmodule.ko || true) && sudo insmod ./build/maxmodule.ko

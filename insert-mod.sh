@@ -1,1 +1,0 @@
-sudo insmod ./build/maxmodule.ko
